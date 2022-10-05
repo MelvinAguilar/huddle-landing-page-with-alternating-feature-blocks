@@ -1,0 +1,60 @@
+.btn {
+    border: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: $theme-box-shadow;
+    
+    display: block;
+    text-decoration: none;
+    transition: $theme-transition;
+
+    &--primary {
+        margin: 0 1rem;
+        padding: 1.2rem 1.5rem;
+
+        color: $theme-white-color;
+        background-color: $theme-pink-color;
+    }
+
+    &--secondary {
+        color: $theme-dark-cyan-color;
+        padding: 0.7rem 2.5rem;
+
+        background-color: $theme-white-color;
+    }
+
+    @include media-hover-effect() {
+        &:hover {
+            background-color: darken($theme-pink-color, 20%);
+            transform: scale(1.05);
+            box-shadow: $theme-box-shadow-hover;
+        }
+
+        &--secondary:hover {
+            background-color: darken($theme-white-color, 5%);
+        }
+    }
+}
+
+@include media-breakpoint-up($screen-sm) {
+    .btn--primary {
+        font-size: 1.5rem;
+    }
+}
+
+@include media-breakpoint-up($screen-lg) {
+    .btn {
+        &--secondary  {
+            padding: 1rem 4rem;
+        }
+
+        &--primary {
+            margin: 0;
+            max-width: 17.5rem;
+            font-size: 0.9rem;
+        }
+    }
+}

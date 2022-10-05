@@ -1,0 +1,13 @@
+.horizontal-list {
+    ul {
+        @include flex(row);
+        flex-wrap: wrap;
+        
+        padding-inline-start: 0;
+        gap: 1rem;
+    }
+
+    ul > li {
+        display: block;
+    }
+}

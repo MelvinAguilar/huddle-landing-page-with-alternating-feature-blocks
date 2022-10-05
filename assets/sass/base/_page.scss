@@ -1,0 +1,20 @@
+body {
+    font-family: $theme-text-font;
+    font-size: 1.125rem;
+    color: $theme-dark-cyan-color;
+    width: 100%;
+
+    background: $theme-pale-cyan-color url('../images/bg-hero-mobile.svg') no-repeat center top;
+    background-size: contain;
+}
+
+main {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+@include media-breakpoint-up($screen-md) {
+    body {
+        background-image: url('../images/bg-hero-desktop.svg')
+    }
+}

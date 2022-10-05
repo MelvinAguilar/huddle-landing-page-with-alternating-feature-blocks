@@ -1,0 +1,50 @@
+.header {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.3rem 1rem;
+
+    animation: fadeInDown 0.8s;
+
+    &__logo {
+        max-width: 11rem;
+        height: auto;
+        object-fit: contain;
+
+        transition: $theme-transition;
+        @include media-hover-effect() {
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up($screen-rwd) {
+    .header {
+        justify-content: space-between;
+        
+        &__logo {
+            max-width: 8rem;
+        }
+    }
+}
+
+@include media-breakpoint-up($screen-sm) {
+    .header  {
+        padding: 3.3rem 1.7rem;        
+    }
+}
+
+@include media-breakpoint-up($screen-lg) {
+    .header  {
+        padding: 2.5rem 5rem;
+        max-width: 90rem;
+        margin: 0 auto;
+        
+        &__logo {
+            max-width: 12.4rem;
+        }
+    }
+}
+

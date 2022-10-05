@@ -1,0 +1,193 @@
+footer {
+    background-color: $theme-dark-cyan-color;
+    
+    color: $theme-white-color;
+    padding: 10.4rem 2rem 2rem 2rem;
+    position:  relative;
+
+    animation: fadeInLeft 0.8s;
+}
+
+.wrapper {
+    max-width: 79.375rem;
+    margin: 0 auto;
+}
+
+.contact {
+    padding-bottom: 2.5rem;
+    
+    &__logo {
+        filter: brightness(0) invert(100%);
+        margin-bottom: 2rem;
+        transition: $theme-transition;
+
+        @include media-hover-effect() {
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__address {
+        font-style: normal;
+        & > * {
+            margin-bottom: 1.5rem;
+        }
+    }
+    
+    &__phone {
+        @include before-icon('../images/icon-phone.svg');
+    }
+
+    &__email {
+        @include before-icon('../images/icon-email.svg');
+    }
+
+    &__ubication {
+        @include before-icon('../images/icon-location.svg');
+        &::before {
+            margin-right: 1.75rem;
+        }
+    }
+
+    &__phone, &__email {
+        transition: $theme-transition;
+        width: fit-content;
+    }
+
+    @include media-hover-effect {
+        &__phone:hover, &__email:hover {
+            color: $theme-pink-color;
+        }
+    }
+}
+
+.link {
+    &__list-item {
+        margin-bottom: 1rem;
+    }
+    
+    &__reference {
+        text-decoration: none;
+        color: $theme-white-color;
+        transition: $theme-transition;
+
+        @include media-hover-effect() {
+            &:hover {
+                color: $theme-pink-color;
+            }
+        }
+    }
+}
+
+.social {
+    text-align: center;
+
+    &__list {
+        margin: 2rem 0;
+    }
+
+    &__link {
+        @include size(1.875rem);
+        text-decoration: none;
+
+        border: 1px solid $theme-white-color;
+        border-radius: 50%;
+        padding: 0.5rem;
+        
+        @include flex();
+
+        color: $theme-white-color;
+        font-size: 0.881rem;
+        transition: $theme-transition;
+
+        @include media-hover-effect() {
+            &:hover {
+                transform: scale(1.3);
+                color: $theme-dark-cyan-color;
+                border-color: $theme-pink-color;
+                background-color: $theme-pink-color;
+            }
+        }
+    }
+}
+
+.community {
+    max-width: 50rem;
+    position: absolute;
+    left:0;
+    right:0;
+    top: -9rem;
+
+    @include flex(column, space-between, center);
+    gap: 1.5rem;
+
+    .btn {
+        width: 80%;
+    }
+}
+
+@include media-breakpoint-up($screen-sm) {
+    footer {
+        padding-top: 12.4rem
+    }
+
+    .community {
+        top: -14rem;
+        padding: 3rem;
+    }
+}
+
+@include media-breakpoint-up($screen-lg) {
+    footer {
+        padding: 11.8rem 4rem 3.8rem 7.4rem;
+    }
+    
+    .community {
+        top: -12rem;
+        padding: 4rem 3rem 3rem 3rem;
+        margin:  0 auto;
+        height: 17.6rem;
+
+        .btn {
+            max-width: 25rem;
+            //width: 100%;
+            border-radius: 3rem;
+            font-size: 1.25rem;
+            padding: 1.7rem 3rem;
+        }
+    }
+
+    .wrapper {
+        @include flex(row, center, normal);
+    }
+
+    .contact {
+        flex: 40%;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding-right: 7rem;
+        padding-bottom: 0;
+    }
+
+    .link {
+        flex: 38%;
+
+        &__list {
+            margin-top: 5rem;
+            height: 8.5rem;
+            @include flex(column, flex-start, stretch);
+            flex-wrap: wrap;
+        }
+    }
+
+    .social {
+        @include flex(column, space-between, flex-start);
+        flex: 22%;
+        font-size: 0.781rem;
+
+        &__list {
+            margin-top: 5rem;
+        }
+    }
+}

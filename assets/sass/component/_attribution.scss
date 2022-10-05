@@ -1,0 +1,28 @@
+.attribution {
+    margin-top: 2.6rem;
+    text-align: center;
+    color: $theme-white-color;
+    font-size: 0.588rem;
+
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0;
+    right: 0;
+
+    a {
+        text-decoration: none;
+        color: $theme-pink-color;
+
+        @include media-hover-effect {
+            &:hover  {
+                color: lighten($theme-pink-color, 20%);
+            }
+        }
+    }
+
+    @include media-breakpoint-up($screen-lg) {
+        font-size: 0.788rem;
+        position: initial;
+    }
+}
+

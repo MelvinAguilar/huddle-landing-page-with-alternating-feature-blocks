@@ -1,0 +1,168 @@
+.card {
+    margin: 1.5rem;
+    padding: 2.3rem 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: $theme-box-shadow;
+    text-align: center;
+
+    transition: $theme-transition;
+
+    @include media-hover-effect() {
+        &:hover {
+            box-shadow: $theme-box-shadow-hover;
+        }
+
+        &:not(.community):hover {
+            transform: scale(1.005);
+        }
+    }
+}
+
+.introduction {
+    margin: 3rem 1rem 0 1rem;
+    text-align: center;
+
+    animation: fadeInUp 0.8s;
+
+    &__text {
+        font-size: 1.2rem;
+        margin:  2.5rem 0;
+    }
+
+    &__picture {
+        display: block;
+        margin: 4rem 0;
+    }
+
+    &__image {
+        @include img-fluid;
+    }
+}
+
+.feature-section {
+    background-color: $theme-white-color;
+    padding-bottom: 15.5rem;
+
+    animation: fadeInLeft 0.8s;
+}
+
+.feature {
+    &__heading {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@include media-breakpoint-up($screen-sm) {
+    .card {
+        padding: 5rem;
+        margin: 3rem 2.3rem;
+    }
+    
+    .introduction {
+        margin: 7rem 5rem 0 5rem;
+
+        &__text {
+            font-size: 1.95rem;
+        }
+    }
+    
+    .feature-section {
+        padding-bottom: 28.5rem;
+    }
+
+    .feature {
+        &__heading {
+            margin: 4.5rem 0 2.5rem 0;
+        }
+
+        &__text {
+            font-size: 1.75rem;
+        }
+    }    
+}
+
+@include media-breakpoint-up($screen-lg) {
+    .introduction {
+        @include flex(row);
+        margin-top: 1.5rem;
+        margin-bottom: 3.4rem;       
+
+        &__content {
+            flex: 45%;
+            text-align: left;
+            padding-right: 3.3rem;
+        }
+
+        &__picture {
+            flex: 55%;
+            margin: 0;
+        }
+
+        &__heading {
+            text-align: left;
+            font-size: 2.5rem;
+            padding-top: 2rem;
+        }
+
+        &__text {
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+    }
+
+    .feature-section {
+        margin-top: 1.1rem;
+        padding: 10rem 0 21.7rem 0;
+
+        @include flex;
+        gap: 2.5rem;
+    }
+
+    .feature {
+        max-width: 76.875rem;
+        min-height: 27.5rem;
+        @include flex(row);
+        text-align: left;
+        padding: 2.3rem;
+        margin: 0 2rem;
+        
+        
+        &__content {
+            flex: 65%;
+            padding: 0 11.2rem 0 5rem;
+        }
+
+        &__picture {
+            flex: 35%;
+        }
+
+        &__text {
+            font-size: 1.125rem;
+            color: $theme-grayish-blue-color;
+        }
+        
+        &__heading {
+            font-size: 1.719rem;
+            margin: 0.313rem 0 0.813rem 0;
+            text-align: left;
+        }
+
+        &:nth-of-type(odd) {
+            flex-direction: row-reverse;
+        }
+
+        &:nth-of-type(even) {
+            & .feature__picture {
+                flex: 44%;
+                padding-left: 5rem;
+            }
+
+            & .feature__content {
+                flex: 56%;
+                padding: 0 0 0 9.5rem;
+            }
+        }
+    }
+}

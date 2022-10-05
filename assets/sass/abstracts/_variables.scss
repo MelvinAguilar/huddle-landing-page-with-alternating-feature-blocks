@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400;700&display=swap');
+
+// Font Family
+$theme-text-heading-font: "Poppins", sans-serif;
+$theme-text-font: "Open Sans", sans-serif;
+
+// Primary colors
+$theme-pink-color: hsl(322, 100%, 66%);
+
+// Neutrals colors
+$theme-pale-cyan-color: hsl(193, 100%, 96%);
+$theme-dark-cyan-color: hsl(192, 100%, 9%);
+$theme-grayish-blue-color: hsl(208, 11%, 55%);
+$theme-white-color: hsl(0, 0%, 100%);
+
+// Transition
+$theme-transition: all 0.2s ease-in-out;
+
+// Breakpoints
+$screen-sm: 576px; // Large smartphones
+$screen-md: 768px; // Small tablets
+$screen-lg: 992px; // Tablets
+$screen-xl: 1200px; // Desktops
+$screen-xxl: 1440px; // Large desktops
+$screen-rwd: 350px; // Custom device
+
+// Border shadow
+$theme-box-shadow: 0 0.063rem 0.188rem rgba($theme-dark-cyan-color, 0.12),
+    0 0.063rem 0.125rem rgba($theme-dark-cyan-color, 0.24);
+$theme-box-shadow-hover: 0 0.875rem 1.75rem rgba($theme-dark-cyan-color, 0.25), 
+    0 0.625rem 0.625rem rgba($theme-dark-cyan-color, 0.22);
