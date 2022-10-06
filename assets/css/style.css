@@ -213,6 +213,7 @@ main {
 .feature-section {
   background-color: hsl(0deg, 0%, 100%);
   padding-bottom: 15.5rem;
+  display: inline-block;
   animation: fadeInLeft 0.8s;
 }
 
